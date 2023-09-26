@@ -1,0 +1,48 @@
+.section-product {
+    .container {
+        &-product {
+            padding-block: 40px;
+            .subtext-card {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    border-radius: 24px;
+                    background-color: $white;
+                    &-image {
+                        border-radius: 24px 24px 0 0;
+                    }
+                    &-body {
+                        display: flex;
+                        padding: 16px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 12px;
+                        &-span {
+                            color: $primary;
+                            font-family: $font-display;
+                            font-size: 12px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+                        &-desc {
+                            color: $black;
+                            font-family: $font-display;
+                            font-size: 16px;
+                            font-weight: 500;
+                            letter-spacing: -0.64px;
+                        }
+                        .wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

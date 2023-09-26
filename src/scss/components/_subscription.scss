@@ -1,0 +1,88 @@
+.section-subscription {
+    .container {
+        &-subscription {
+            position: relative;
+            .subtext {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    &-display {
+                        color: $white;
+                        font-family: $font-display;
+                        font-size: 96px;
+                        font-weight: 500;
+                        line-height: 96px; /* 100% */
+                        letter-spacing: -3.84px;
+                    }
+                    &-desc {
+                        color: $subText;
+                        font-family: $font-body;
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: -0.64px;
+                        max-width: 695px;
+                    }
+                }
+                .wrapper-btn {
+                    display: flex;
+                    gap: 16px;
+                    .btn-subscription-lg {
+                        gap: 32px;
+                        .label {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 12px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                        }
+                        .wrap {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            gap: 116px;
+                            .title {
+                                color: $white;
+                                font-family: $font-display;
+                                font-size: 32px;
+                                font-weight: 500;
+                                line-height: 32px; /* 100% */
+                                letter-spacing: -1.28px;
+                                max-width: 241px;
+                            }
+                            .arrow {
+                                display: inline-flex;
+                            }
+                        }
+                    }
+                    .btn-subscription-dark {
+                        .title {
+                            display: inline-flex;
+                            text-align: center;
+                            font-family: $font-display;
+                            font-size: 32px;
+                            font-weight: 500;
+                            line-height: 32px; /* 100% */
+                            letter-spacing: -1.28px;
+
+                            background: linear-gradient(99deg, #4200ff 0%, #22e4ff 55.73%, #9eff00 100%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            max-width: 241px;
+                        }
+                    }
+                }
+            }
+            .subscription-decoration {
+                position: absolute;
+                margin-right: -69px;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
