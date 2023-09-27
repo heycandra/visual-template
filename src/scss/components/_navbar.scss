@@ -1,6 +1,11 @@
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: $white;
     .container {
         &-nav {
+            position: relative;
             padding-block: 16px;
             .nav {
                 width: 100%;
@@ -16,10 +21,38 @@
                     &:nth-child(even) {
                         gap: 8px;
                     }
+                    @include responsive(xl) {
+                        .btn-link-dekstop,
+                        .btn-primary-dekstop {
+                            @include responsive(xl) {
+                                display: none !important;
+                            }
+                        }
+                    }
                     &-menu {
                         display: flex;
                         align-items: center;
-                        gap: 32px;
+                        gap: 42px;
+                        @include responsive(xl) {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 auto;
+                            background-color: $white;
+                            text-align: center;
+                            transition: all 500ms ease;
+                            height: 0;
+                            overflow: hidden;
+                            .nav-link {
+                                opacity: 0;
+                            }
+                        }
                         .nav-link {
                             color: $black;
                             font-family: $font-display;
@@ -27,14 +60,51 @@
                             font-weight: 500;
                             line-height: 16px; /* 100% */
                             letter-spacing: -0.64px;
+                            transition: all 300ms ease;
+                            &:hover {
+                                color: $primary;
+                            }
                         }
                         .btn-link-mobile,
                         .btn-primary-mobile {
                             display: none;
+                        }
+
+                        &.active {
+                            height: 100vh !important;
+                            .nav-link {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .nav-btn-responsive {
+                        display: none;
+                        @include responsive(xl) {
+                            display: block;
+                            background-image: url("../../../assets/image/menu-black.svg");
+                            background-repeat: no-repeat;
+                            background-size: 24px 24px;
+                            width: 24px;
+                            height: 24px;
+                            border: transparent;
+                            background-color: transparent;
+                            transition: all 100ms ease;
+                            @include responsive(xl) {
+                                display: block;
+                                z-index: 3;
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+.cross{
+    background-image: url("../../../assets/image/cross-black.svg")!important;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
 }
