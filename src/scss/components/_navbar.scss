@@ -1,0 +1,40 @@
+.navbar {
+    .container {
+        &-nav {
+            padding-block: 16px;
+            .nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(odd) {
+                        gap: 32px;
+                    }
+                    &:nth-child(even) {
+                        gap: 8px;
+                    }
+                    &-menu {
+                        display: flex;
+                        align-items: center;
+                        gap: 32px;
+                        .nav-link {
+                            color: $black;
+                            font-family: $font-display;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 16px; /* 100% */
+                            letter-spacing: -0.64px;
+                        }
+                        .btn-link-mobile,
+                        .btn-primary-mobile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

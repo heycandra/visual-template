@@ -1,0 +1,93 @@
+.footer {
+    .container {
+        &-footer {
+            padding-top: 80px;
+            padding-bottom: 24px;
+            .footer-inner {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 190px;
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    &-brand {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        &-logo {
+                            display: inline-flex;
+                            img {
+                                max-width: 147px;
+                            }
+                        }
+                        &-subtext {
+                            max-width: 407px;
+                            color: $black;
+                            font-family: $font-display;
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 24px; /* 100% */
+                            letter-spacing: -0.96px;
+                        }
+                    }
+                    &-menus {
+                        width: 50%;
+                        display: flex;
+                        justify-content: space-between;
+                        .services,
+                        .categories,
+                        .company,
+                        .others {
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            gap: 16px;
+                            &-label {
+                                color: $subText4;
+                                font-family: $font-display;
+                                font-size: 16px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                            }
+                            &-list {
+                                display: flex;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                gap: 16px;
+                                .nav-link {
+                                    color: $black;
+                                    font-family: $font-display;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    letter-spacing: -0.64px;
+                                }
+                            }
+                        }
+                    }
+                    &-copyright {
+                        color: $subText3;
+                        font-family: $font-display;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    &-mark {
+                        display: flex;
+                        gap: 40px;
+                        &-subtext {
+                            color: $subText4;
+                            font-family: $font-display;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: -0.64px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

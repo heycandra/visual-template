@@ -5,8 +5,10 @@
     font-weight: 500;
     font-size: $p;
     color: $white;
-    padding: 16px 24px;
+    padding: 9px 24px;
     transition: all 300ms ease;
+    display: inline-flex;
+    align-items: center;
     &-primary {
         color: $white;
         border-radius: 24px;
@@ -17,7 +19,8 @@
     }
     &-subscription {
         color: $white;
-        padding: 16px;
+        padding: 5px 16px;
+        gap: 8px;
         border-radius: 24px;
         background: linear-gradient(99deg, #4200ff 0%, #22e4ff 55.73%, #80ff00 100%);
         &-lg {
@@ -41,5 +44,8 @@
     &-arrow {
         max-width: 32px;
         padding: 0;
+    }
+    &-icon {
+        padding: 12px;
     }
 }
