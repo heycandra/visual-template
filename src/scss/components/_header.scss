@@ -4,6 +4,12 @@
     .container {
         &-header {
             padding-block: 72px;
+            @include responsive(xl) {
+                padding-block: 52px;
+            }
+            @include responsive(md) {
+                padding-block: 42px;
+            }
             .subtext-text {
                 &-display {
                     color: $white;
@@ -12,6 +18,19 @@
                     font-weight: 500;
                     line-height: 72px; /* 112.5% */
                     letter-spacing: -2.56px;
+                    @include responsive(xl) {
+                        font-size: 52px;
+                        line-height: 68px;
+                    }
+                    @include responsive(md) {
+                        font-size: 42px;
+                        line-height: 56px;
+                    }
+                    @include responsive(sm) {
+                        font-size: 28px;
+                        line-height: 46px;
+                        letter-spacing: -1.1px;
+                    }
                 }
             }
         }

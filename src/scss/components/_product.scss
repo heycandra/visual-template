@@ -12,8 +12,13 @@
                     align-items: flex-start;
                     border-radius: 24px;
                     background-color: $white;
+                    transition: all 300ms ease;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
                     &-image {
                         border-radius: 24px 24px 0 0;
+                        vertical-align: middle;
                     }
                     &-body {
                         display: flex;
@@ -21,6 +26,10 @@
                         flex-direction: column;
                         align-items: flex-start;
                         gap: 12px;
+                        @include responsive(sm) {
+                            padding: 10px;
+                            gap: 6px;
+                        }
                         &-span {
                             color: $primary;
                             font-family: $font-display;
@@ -34,13 +43,30 @@
                             font-size: 16px;
                             font-weight: 500;
                             letter-spacing: -0.64px;
+                            max-width: 224px;
+                            text-overflow: ellipsis;
                         }
                         .wrapper {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            position: relative;
+                            @include responsive(sm) {
+                                .btn-arrow {
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                }
+                            }
                         }
                     }
+                }
+                @include responsive(md) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @include responsive(sm) {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
                 }
             }
         }

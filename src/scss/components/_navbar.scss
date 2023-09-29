@@ -29,10 +29,13 @@
                             }
                         }
                     }
+                    .logo-image {
+                        max-width: 149px;
+                    }
                     &-menu {
                         display: flex;
                         align-items: center;
-                        gap: 42px;
+                        gap: 32px;
                         @include responsive(xl) {
                             position: absolute;
                             top: 100%;
@@ -68,10 +71,14 @@
                         .btn-link-mobile,
                         .btn-primary-mobile {
                             display: none;
+                            @include responsive(xl) {
+                                display: block;
+                            }
                         }
 
                         &.active {
                             height: 100vh !important;
+                            padding: 40px;
                             .nav-link {
                                 opacity: 1;
                             }
@@ -101,8 +108,8 @@
     }
 }
 
-.cross{
-    background-image: url("../../../assets/image/cross-black.svg")!important;
+.cross {
+    background-image: url("../../../assets/image/cross-black.svg") !important;
     background-repeat: no-repeat;
     background-size: 24px 24px;
     width: 24px;
