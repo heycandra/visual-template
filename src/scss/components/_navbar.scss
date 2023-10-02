@@ -29,8 +29,15 @@
                             }
                         }
                     }
-                    .logo-image {
-                        max-width: 149px;
+                    &-logo {
+                        display: inline-flex;
+                        .logo-image {
+                            max-width: 149px;
+                            vertical-align: middle;
+                            @include responsive(md) {
+                                width: 80%;
+                            }
+                        }
                     }
                     &-menu {
                         display: flex;
