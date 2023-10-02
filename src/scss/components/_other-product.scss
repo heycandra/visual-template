@@ -54,6 +54,7 @@
                             flex-direction: column;
                             align-items: flex-start;
                             gap: 12px;
+                            width: 100%;
                             @include responsive(sm) {
                                 padding: 10px;
                                 gap: 6px;
@@ -71,12 +72,14 @@
                                 font-size: 16px;
                                 font-weight: 500;
                                 letter-spacing: -0.64px;
+                                max-width: 224px;
                             }
                             .wrapper {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
                                 position: relative;
+                                width: inherit;
                                 @include responsive(sm) {
                                     .btn-arrow {
                                         position: absolute;
