@@ -1,0 +1,91 @@
+
+.log {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
+    }
+    .left { 
+        width: 40%;
+
+        @include responsive(sm) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 40%;
+
+        @include responsive(sm) {
+            width: 100%;
+        }
+    }
+    &-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 24px 32px;
+
+        @include responsive(sm) {
+            padding: 24px 12px;
+        }
+
+        &.active {
+            opacity: .5;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                font-family: "Satoshi", sans-serif;
+                color: black;
+                font-weight: bold;
+
+                span {
+                    background-color: black;
+                    color: white;
+                    border-radius: 100px;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-left: 10px;
+
+                    @include responsive(sm) {
+                        font-size: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+        &-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            li {
+                font-family: "Satoshi", sans-serif;
+                color: black;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}

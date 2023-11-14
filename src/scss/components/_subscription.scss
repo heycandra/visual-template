@@ -1,5 +1,6 @@
 .section-subscription {
     .container {
+        
         &-subscription {
             padding-block: 40px;
             position: relative;
@@ -37,7 +38,8 @@
                     &-desc {
                         color: $subText;
                         font-family: $font-body;
-                        font-size: 16px;
+                        font-size: 20px;
+                        line-height: 32px;
                         font-weight: 400;
                         letter-spacing: -0.64px;
                         max-width: 695px;
@@ -45,97 +47,6 @@
                             max-width: 100%;
                         }
                     }
-                }
-                .wrapper-btn {
-                    display: flex;
-                    gap: 16px;
-                    z-index: 1;
-                    @include responsive(md) {
-                        justify-content: space-between;
-                    }
-                    @include responsive(sm) {
-                        flex-direction: column;
-                    }
-                    .btn-subscription-lg {
-                        gap: 32px;
-                        text-align: start;
-                        justify-content: center;
-                        @include responsive(xl) {
-                            gap: 16px;
-                        }
-                        .label {
-                            color: $white;
-                            font-family: $font-display;
-                            font-size: 12px;
-                            font-weight: 700;
-                            text-transform: uppercase;
-                        }
-                        .wrap {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: flex-end;
-                            gap: 116px;
-                            @include responsive(xl) {
-                                gap: 52px;
-                            }
-                            .title {
-                                color: $white;
-                                font-family: $font-display;
-                                font-size: 32px;
-                                font-weight: 500;
-                                line-height: 32px; /* 100% */
-                                letter-spacing: -1.28px;
-                                max-width: 241px;
-                                @include responsive(xl) {
-                                    font-size: 28px;
-                                }
-                            }
-                            .arrow {
-                                display: inline-flex;
-                                max-width: 32px;
-                                @include responsive(md) {
-                                    max-width: 28px;
-                                }
-                                @include responsive(sm) {
-                                    max-width: 24px;
-                                }
-                            }
-                        }
-                    }
-                    .btn-subscription-dark {
-                        justify-content: center;
-                        .title {
-                            display: inline-flex;
-                            text-align: center;
-                            font-family: $font-display;
-                            font-size: 32px;
-                            font-weight: 500;
-                            line-height: 32px; /* 100% */
-                            letter-spacing: -1.28px;
-                            @include responsive(xl) {
-                                font-size: 28px;
-                            }
-
-                            background: linear-gradient(99deg, #4200ff 0%, #22e4ff 55.73%, #9eff00 100%);
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            max-width: 241px;
-                        }
-                    }
-                }
-            }
-            .subscription-decoration {
-                position: absolute;
-                margin-right: -69px;
-                bottom: 0;
-                right: 0;
-                max-width: 659.05px;
-                @include responsive(xl) {
-                    max-width: 346px;
-                }
-                @include responsive(md) {
-                    display: none;
                 }
             }
         }
